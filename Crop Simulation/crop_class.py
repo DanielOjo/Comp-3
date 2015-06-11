@@ -116,6 +116,7 @@ def manage_crop(crop):
             auto_grow(crop,30)
         elif option == 3:
             print(crop.report())
+            print()
         elif option == 0:
             noexit = False
             print()
