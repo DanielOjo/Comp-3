@@ -6,8 +6,11 @@ from PyQt4.QtGui import *
 from PyQt4.QtCore import *
 
 class NameWidget(QWidget):
+    NameEntered = pyqtSignal()
     def __init__(self):
         super().__init__()
+
+        
 
         #Create Components
         self.label = QLabel("Please enter your name: ")
@@ -31,3 +34,4 @@ class NameWidget(QWidget):
     def display_name(self):
         name = self.name.text()
         print(name)
+        self.NameEntered.emit()
