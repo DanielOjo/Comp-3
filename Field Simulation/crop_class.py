@@ -102,7 +102,7 @@ def get_menu_choice():
        except ValueError:
             print("Please enter a valid option")
     print()
-       return choice
+    return choice
 
 def manage_crop(crop):
     print("This is the crop management program")
