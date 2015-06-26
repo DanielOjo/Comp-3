@@ -7,7 +7,7 @@ import random
 class Animal:
     """A geneic food crop"""
     #constructor
-    def __init__(self,growth_rate, light_need,water_need):
+    def __init__(self,growth_rate, light_need,water_need, name):
         #set the attributes with am inital value
         self._weight = 0
         self._days_growing = 0
@@ -17,7 +17,7 @@ class Animal:
         self._status = "Baby"
         self._type = "Generic"
         self._growth = 0
-        self._name = "Chris"
+        self._name = name
         #the above attributes are prefixed with an underscore to indicate
         #that they should not be accessed directly from outwith the class
 
@@ -127,7 +127,7 @@ def manage_animal(animal):
                                     
 def main():
     #instanciate the class
-    new_animal = Animal(1,4,3)
+    new_animal = Animal(1,4,3, "John")
     manage_animal(new_animal)
 
     

@@ -8,12 +8,13 @@ class Cow(Animal):
     """A Cow"""
 
     #constructor
-    def __init__(self):
+    def __init__(self,name):
         #call the parent class constructor with default values for potato
         #growth rate =1; light need = 3; water need = 6
-        super().__init__(1,3,6)
+        super().__init__(1,3,6,name)
         self._type = "Cow"
-        self._name = "John"
+        self.name = name
+        
 
     #override grow method for subclass
     def grow(self,food,water):
@@ -29,9 +30,11 @@ class Cow(Animal):
             #update the status
             self._update_status()
 
+    
+
 def main():
     #create a new cow
-    cow_animal = Cow()
+    cow_animal = Cow("Charlie")
     print(cow_animal.report())
     #manually age the cow
     manual_age(cow_animal)
