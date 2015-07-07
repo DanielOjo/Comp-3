@@ -7,7 +7,7 @@ from sheep_class import *
 
 def display_menu():
     print()
-    print("Which crop would you like to create?")
+    print("Which animal would you like to add?")
     print()
     print("1. Cow")
     print("2. Sheep")
@@ -31,9 +31,13 @@ def create_animal():
     display_menu()
     choice = select_option()
     if choice ==1:
-        new_animal = Cow()
+        print()
+        name = input("Please give your cow a name: ")
+        new_animal = Cow(name)
     elif choice ==2:
-        new_animal = Sheep()
+        print()
+        name = input("Please give your sheep a name: ")
+        new_animal = Sheep(name)
     return new_animal
 
 def main():

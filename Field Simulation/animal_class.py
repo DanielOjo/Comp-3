@@ -127,7 +127,8 @@ def manage_animal(animal):
                                     
 def main():
     #instanciate the class
-    new_animal = Animal(1,4,3, "John")
+    name = input("Please give your animal a name: ")
+    new_animal = Animal(1,4,3, name)
     manage_animal(new_animal)
 
     

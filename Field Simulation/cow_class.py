@@ -34,7 +34,8 @@ class Cow(Animal):
 
 def main():
     #create a new cow
-    cow_animal = Cow("Charlie")
+    name = input("Please Enter a name for your cow: ")
+    cow_animal = Cow(name)
     print(cow_animal.report())
     #manually age the cow
     manual_age(cow_animal)
